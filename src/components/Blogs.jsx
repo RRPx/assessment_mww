@@ -23,7 +23,9 @@ const Blogs = () => {
         >
           <img
             className="w-full"
-            src="src\assets\Blog\mobile_image.png"
+            src={item.image}
+            height={600}
+            width={600}
             alt="Sunset in the mountains"
           />
           <div className="px-6 py-4">
