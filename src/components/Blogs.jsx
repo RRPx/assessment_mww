@@ -22,7 +22,7 @@ const Blogs = () => {
           key={item.id}
         >
           <img
-            className="w-full"
+            className="w-full hover:hover-effect"
             src={item.image}
             height={600}
             width={600}
