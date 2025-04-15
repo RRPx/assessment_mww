@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Blogs from "./Blogs";
 
 const AllBlogs = () => {
   const [blogCategories, setBlogCategories] = useState([]);
@@ -9,7 +10,6 @@ const AllBlogs = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setBlogCategories(data);
       });
   }, []);
@@ -35,7 +35,7 @@ const AllBlogs = () => {
           </button>
         </div>
         {blogCategories?.map((item) => (
-          <div>
+          <div key={item.id}>
             <button
               className={` sm:py-[11px] py-1  sm:px-6 px-4 border rounded-3xl bg-white`}
             >
@@ -48,6 +48,7 @@ const AllBlogs = () => {
             </button>
           </div>
         ))}
+        <Blogs />
       </div>
     </div>
   );
